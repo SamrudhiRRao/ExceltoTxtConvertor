@@ -10,6 +10,7 @@ from excel_to_txt_convertor_utility.utils.tabulate_df import tabulate_df
 from excel_to_txt_convertor_utility.utils.final_txt import final_txt
 
 def main():
+
     try:
         my_parser = argparse.ArgumentParser(description='Convert csv to.txt file')
         my_parser.add_argument('--Path',
@@ -29,6 +30,7 @@ def main():
         final_txt(txtcode,txtfile) # Calls a function to put the contents int .txt file
     except Exception as ex:
         print(ex)
+        
 if __name__ == "__main__":
     # print("\nName of CSV script:", sys.argv[1])
     main()
