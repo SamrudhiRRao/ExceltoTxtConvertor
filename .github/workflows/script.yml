@@ -1,0 +1,30 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CD
+
+# Controls when the workflow will run
+on:
+  pull_request:
+    branches:
+      - develop
+    types: [ closed ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build_wheel:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2  
+    - name: Building wheel file - Giving permission
+      shell: bash
+      run: |
+        ls
+        chmod +x lib_build.sh
+        
+    
+    - name: Building wheel file - Running the script
+      shell: bash
+      run: |
+        sh lib_build.sh
