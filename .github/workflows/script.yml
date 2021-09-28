@@ -20,10 +20,10 @@ jobs:
       shell: bash
       run: |
         ls
-        chmod +x lib_build.sh
+        chmod +x ./scripts/lib_build.sh
         
     
     - name: Building wheel file - Running the script
       shell: bash
       run: |
-        sh lib_build.sh
+        sh ./scripts/lib_build.sh
