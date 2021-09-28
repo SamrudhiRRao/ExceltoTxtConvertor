@@ -16,14 +16,15 @@ jobs:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2  
     - name: Building wheel file - Giving permission
       shell: bash
       run: |
         ls
-        chmod +x **/lib_build.sh
+        chmod +x lib_build.sh
         
     
     - name: Building wheel file - Running the script
       shell: bash
       run: |
-        sh **/lib_build.sh
+        sh lib_build.sh
