@@ -19,10 +19,11 @@ jobs:
     - name: Building wheel file - Giving permission
       shell: bash
       run: |
-        chmod +x ./lib_build.sh
-        # echo `ls`
+        ls
+        chmod +x lib_build.sh
+        
     
     - name: Building wheel file - Running the script
       shell: bash
       run: |
-        sh ./lib_build.sh
+        sh lib_build.sh
