@@ -17,6 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2  
+    - name: Installing twine
+      shell: bash
+      run: |
+            pip install twine
     - name: Building wheel file - Giving permission
       shell: bash
       run: |
