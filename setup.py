@@ -17,7 +17,7 @@ with open ("requirements.txt") as requirements:
 
 setup(
     name = "excel_to_txt_convertor",
-    version = "0.1",
+    version = "0.2",
     author = "Samrudhi R Rao",
     author_email = "raosamrudhi@gmail.com",
     description = ("An demonstration of how to create, document, and publish "
